@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/#">Rankings</a>
+                    <a href="https://laravel.com/">Rankings</a>
                     <a href="https://laracasts.com">Table Booking</a>
                     <a href="https://laravel-news.com">Bookings</a>
                     <a href="https://blog.laravel.com">Shop</a>
