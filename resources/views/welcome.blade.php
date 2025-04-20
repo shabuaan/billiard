@@ -1,100 +1,60 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pool Billiard Association - Home</title>
+    
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <title>Pool Billiard</title>
+    <style>
+        .hero {
+            background-color: #0d6efd;
+            color: white;
+            padding: 40px 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        .section {
+            padding: 40px 0;
+        }
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+        .opening-hours li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
 
-            .full-height {
-                height: 100vh;
-            }
+    <div class="container mt-4">
+        <div class="hero">
+            <h1>Welcome to the Pool Billiard Association</h1>
+            <p>Where precision meets passion! Join us for daily games, leagues, and more.</p>
+        </div>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Pool Billliard Association
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/">Ranking</a>
-                    <a href="https://laracasts.com">Table Booking</a>
-                    <a href="https://laravel-news.com">Bookings</a>
-                    <a href="https://blog.laravel.com">Shop</a>
-                </div>
-
-                <div class="container mt-5">
-    <h1 class="text-center mb-4">Pool Billiard Association - Table Booking</h1>
-</div>
+        <div class="section row text-center">
+            <div class="col-md-6 mb-4">
+                <h3>Opening Hours</h3>
+                <ul class="opening-hours">
+                    <li><strong>Monday - Thursday:</strong> 2:00 PM – 10:00 PM</li>
+                    <li><strong>Friday:</strong> 2:00 PM – 12:00 AM</li>
+                    <li><strong>Saturday:</strong> 12:00 PM – 12:00 AM</li>
+                    <li><strong>Sunday:</strong> 12:00 PM – 10:00 PM</li>
+                </ul>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h3>Location & Contact</h3>
+                <p>123 Cue Street, Malé, Maldives</p>
+                <p>Email: info@billiardassociation.mv</p>
+                <p>Phone: +960 123-4567</p>
             </div>
         </div>
-    </body>
+    </div>
+
+    <!-- Bootstrap JS (optional, for interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
