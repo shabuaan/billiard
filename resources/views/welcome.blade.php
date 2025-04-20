@@ -3,58 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pool Billiard Association - Home</title>
+    <title>Pool Billiard Association | Home</title>
     
-    <!-- Bootstrap CSS CDN --> 
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        .hero {
-            background-color: #0d6efd;
-            color: white;
-            padding: 40px 20px;
-            border-radius: 12px;
-            text-align: center;
+        body {
+            background-color: #f8f9fa;
         }
 
-        .section {
-            padding: 40px 0;
+        .hero {
+            background: linear-gradient(to right, #0d6efd, #003f8f);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 16px;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            margin-bottom: 30px;
+            font-weight: bold;
         }
 
         .opening-hours li {
-            list-style: none;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
+        }
+
+        .highlight {
+            background-color: #e9ecef;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .map-embed {
+            border: 0;
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px 0;
+            background-color: #0d6efd;
+            color: white;
+            text-align: center;
+            border-radius: 12px;
         }
     </style>
 </head>
 <body>
 
     <div class="container mt-4">
+        <!-- Hero Section -->
         <div class="hero">
-            <h1>Welcome to the Pool Billiard Association</h1>
-            <p>Where precision meets passion! Join us for daily games, leagues, and more.</p>
+            <h1 class="display-5 fw-bold">Welcome to the Pool Billiard Association</h1>
+            <p class="lead">Where precision meets passion. Join our community and experience the thrill of the game.</p>
+            <a href="#membership" class="btn btn-light btn-lg mt-3">Become a Member</a>
         </div>
 
-        <div class="section row text-center">
-            <div class="col-md-6 mb-4">
-                <h3>Opening Hours</h3>
-                <ul class="opening-hours">
+        <!-- Opening Hours & Contact -->
+        <div class="row text-center mb-5">
+            <div class="col-md-6">
+                <h3 class="section-title">🏠 Opening Hours</h3>
+                <ul class="list-unstyled opening-hours">
                     <li><strong>Monday - Thursday:</strong> 2:00 PM – 10:00 PM</li>
                     <li><strong>Friday:</strong> 2:00 PM – 12:00 AM</li>
                     <li><strong>Saturday:</strong> 12:00 PM – 12:00 AM</li>
                     <li><strong>Sunday:</strong> 12:00 PM – 10:00 PM</li>
                 </ul>
             </div>
-            <div class="col-md-6 mb-4">
-                <h3>Location & Contact</h3>
+            <div class="col-md-6">
+                <h3 class="section-title">📍 Location & Contact</h3>
                 <p>123 Cue Street, Malé, Maldives</p>
-                <p>Email: info@billiardassociation.mv</p>
+                <p>Email: <a href="mailto:info@billiardassociation.mv">info@billiardassociation.mv</a></p>
                 <p>Phone: +960 123-4567</p>
             </div>
         </div>
+
+        <!-- Event Highlights -->
+        <div class="highlight text-center">
+            <h4 class="mb-3">🎉 Upcoming Events</h4>
+            <ul class="list-unstyled">
+                <li><strong>April 25:</strong> Doubles Knockout Tournament</li>
+                <li><strong>May 3:</strong> Youth Open Championship</li>
+                <li><strong>May 10:</strong> Women’s League Exhibition</li>
+            </ul>
+            <p class="mt-3">Stay tuned for registration details and exciting prizes!</p>
+        </div>
+
+        <!-- Membership Section -->
+        <div class="highlight text-center" id="membership">
+            <h4 class="mb-3">🎱 Membership Benefits</h4>
+            <ul class="list-unstyled">
+                <li>✔ Unlimited table time on weekdays</li>
+                <li>✔ Priority entry for tournaments</li>
+                <li>✔ Member-only coaching sessions</li>
+                <li>✔ Discounts on snacks & gear</li>
+            </ul>
+            <a href="#" class="btn btn-primary mt-3">Join Now</a>
+        </div>
+
+        <!-- Embedded Map -->
+        <div class="highlight">
+            <h4 class="text-center mb-3">📌 Find Us on the Map</h4>
+            <iframe class="map-embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15834.621380971647!2d73.50199545!3d4.17549645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMTAnMzIuMCJOIDczwrAzMCcwMC4wIkU!5e0!3m2!1sen!2smv!4v1617022493134!5m2!1sen!2smv"
+                allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p class="mb-0">&copy; 2025 Pool Billiard Association. All rights reserved.</p>
+        </footer>
     </div>
 
-    <!-- Bootstrap JS (optional, for interactive components) -->
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
