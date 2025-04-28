@@ -53,6 +53,23 @@
             text-align: center;
             border-radius: 12px;
         }
+        .billiard-ball {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            margin: 4px;
+        }
+        .location-tab {
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin: 0 10px;
+        }
     </style>
 </head>
 <body>
@@ -86,13 +103,39 @@
 
         <!-- Event Highlights -->
         <div class="highlight text-center">
-            <h4 class="mb-3">🎉 Upcoming Events</h4>
-            <ul class="list-unstyled">
-                <li><strong>April 25:</strong> Doubles Knockout Tournament</li>
-                <li><strong>May 3:</strong> Youth Open Championship</li>
-                <li><strong>May 10:</strong> Women’s League Exhibition</li>
-            </ul>
-            <p class="mt-3">Stay tuned for registration details and exciting prizes!</p>
+            <div class="container py-5">
+    <!-- Location Tabs -->
+    <div class="text-center mb-5">
+        <button class="btn btn-primary location-tab">Malé</button>
+        <button class="btn btn-light location-tab">Hulhumale</button>
+    </div>
+
+    <!-- Date Heading -->
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Today - Apr 28</h2>
+    </div>
+
+    <!-- Time Slots -->
+    <div class="row gy-4">
+        @foreach ($timeSlots as $slot)
+        <div class="col-12">
+            <div class="bg-dark text-white rounded p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="mb-0">{{ $slot['time'] }}</h5>
+                    <small>{{ $slot['tables_left'] }} Tables left</small>
+                </div>
+                <div class="d-flex flex-wrap">
+                    @foreach ($slot['tables'] as $table)
+                    <button type="button" class="billiard-ball" style="background-color: {{ $table['color'] }};">
+                        {{ $table['number'] }}
+                    </button>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
+</div>
         </div>
 
         <!-- Membership Section -->
